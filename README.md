@@ -1,4 +1,20 @@
+# An small application that makes use of Prometheus and Zipkin to increase the level of diagnosability.
+
+
+## Prometheus
+
+The prometheus go client is used to collect go metrics and report them.
+Simply add an endpoint and a handler:
+```go
+	// Add prometheus
+	mux.Handle("/metrics", promhttp.Handler())
+```
+(Source Code)[https://github.com/FlorianLautenschlager/diagnosability/blob/master/svc1/httpserver.go#L84]
+
+ - Library: https://github.com/prometheus/client_golang
+
 ## Zipkin tracing using OpenTracing API
+Took from the examples [here](https://github.com/openzipkin/zipkin-go-opentracing/tree/master/examples/cli_with_2_services).
 
 This directory contains a super simple command line client and two HTTP services
 which are instrumented using the OpenTracing API using the
