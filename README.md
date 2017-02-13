@@ -9,7 +9,7 @@ Simply add an endpoint and a handler:
 	// Add prometheus
 	mux.Handle("/metrics", promhttp.Handler())
 ```
-(Source Code)[https://github.com/FlorianLautenschlager/diagnosability/blob/master/svc1/httpserver.go#L84]
+[Source Code](https://github.com/FlorianLautenschlager/diagnosability/blob/master/svc1/httpserver.go#L84)
 
  - Library: https://github.com/prometheus/client_golang
 
